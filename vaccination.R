@@ -38,9 +38,9 @@ summary_table <- data.frame(
   albania_montenegro_data <- my_data %>%
     filter(country %in% c("Albania", "Montenegro"))
   ggplot(data = albania_montenegro_data, aes(x = date, y = daily_vaccinations, color = country)) +
-    geom_point(size = 3) +  # Increase point size
+    geom_point(size = 3) +  
     labs(x = "Date", y = "Daily Vaccinations", title = "Daily Vaccinations in Albania and Montenegro") +
-    scale_color_manual(values = c("Albania" = "blue", "Montenegro" = "red")) +  # Use specific colors
+    scale_color_manual(values = c("Albania" = "blue", "Montenegro" = "red")) +  
     theme_minimal() +
     theme(legend.position = "top", legend.title = element_blank())
   
