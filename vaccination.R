@@ -32,7 +32,7 @@ summary_table <- data.frame(
   
   print(summary_table)
   
-  library(ggplot2)
+  
   library(dplyr)
   
   albania_montenegro_data <- my_data %>%
