@@ -1,4 +1,7 @@
 library(readr)
+library(ggplot2)
+library(dplyr)
+
 
 my_data <- read.csv("C:/Users/justi/OneDrive/Desktop/country vaccinations/country_vaccinations.csv")
 str(my_data)
@@ -12,7 +15,7 @@ people_vaccinated_albania <- albania_data$people_vaccinated
 
 print(people_vaccinated_albania)
 
-library(ggplot2)
+
 
 albania_data$date <- as.Date(albania_data$date)
 ggplot(data = albania_data, aes(x = date, y = daily_vaccinations)) +
@@ -33,7 +36,6 @@ summary_table <- data.frame(
   print(summary_table)
   
   
-  library(dplyr)
   
   albania_montenegro_data <- my_data %>%
     filter(country %in% c("Albania", "Montenegro"))
